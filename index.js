@@ -28,7 +28,7 @@ app.listen(port, () => {
 })
 
 app.get('/view', async (req, res) => {
-    const {sortBy = 'ProductCode', sortOrder = 'DESC'} = req.query;
+    const {sortBy = 'ProductStoreCode', sortOrder = 'DESC'} = req.query;
     const validColumns = ['ProductCode', 'ProductName', 'ProductDate', 'ProductOriginPrice', 'Quantity', 'ProductStoreCode'];
 
     const validOrders = ['ASC', 'DESC'];
