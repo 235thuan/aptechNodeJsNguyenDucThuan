@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Product</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        .table th, .table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+        .btn-update {
+            color: white;
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-delete {
+            color: white;
+            background-color: #dc3545;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2> List Product</h2>
+
+    <a href="/add" class="btn btn-primary">
+        <i class="fas fa-plus"></i> New Product
+    </a>
+
+
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>Product Code</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Origin Price</th>
+            <th>Quantity </th>
+            <th>
+                Product Store Code
+                <a href="?sortBy=ProductStoreCode&sortOrder=<%= sortBy === 'ProductStoreCode' && sortOrder === 'ASC' ? 'DESC' : 'ASC' %>" style="color: white;">
+                    <i class="sort-icon <%= sortBy === 'ProductStoreCode' ? (sortOrder === 'ASC' ? 'fas fa-arrow-up' : 'fas fa-arrow-down') : '' %>"></i>
+                </a>
+            </th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <% products.forEach(product => { %>
+            <tbody>
+            <td><%= product.ProductCode      %></td>
+            <td><%= product.ProductName         %></td>
+            <td><%= product.ProductDate      %></td>
+            <td><%= product.ProductOriginPrice     %></td>
+            <td><%= product.Quantity   %></td>
+            <td><%= product.ProductStoreCode   %></td>
+            <td><form action="/delete/<%= product.ProductCode %>" method="post" style="display:inline;">
+                    <button type="submit" class="btn btn-delete btn-sm">Delete
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </form></td>
+            </tbody>
+        <% }); %>
+    </table>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
