@@ -1,11 +1,12 @@
-# SoftwareEngineer
+# NodeJS_EXAM
 [![Matrix SVG](https://raw.githubusercontent.com/rodrigograca31/rodrigograca31/master/matrix.svg)](https://www.youtube.com/watch?v=SDkAGkd4NLc)
 <h2> Hi, I'm Thuan! <img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50"></h2>
-<img align='right' src="https://i.pinimg.com/originals/b0/7c/0f/b07c0fc116d1868db07a8bbc2d79aab9.gif" width="230">
-<p><em>Student at <a href="https://htt.edu.vn/">Hanoi College of Technology and Tranding</a>
+<img align='right' src="https://i.pinimg.com/originals/b0/7c/0f/b07c0fc116d1868db07a8bbc2d79aab9.gif" width="230"> 
+<p><em>Student at <a href="https://aptech.fpt.edu.vn/">FPT APTECH</a>
 <img src="https://media.giphy.com/media/fYSnHlufseco8Fh93Z/giphy.gif" width="30">
-<img src="https://htt.edu.vn/wp-content/uploads/2024/01/logoooooo-e1705542743871.png"> 
-</em></p>
+<img src="https://aptech.fpt.edu.vn/wp-content/uploads/2024/06/logo-aptech25-nam_759x480.png" width="300" align='right'> 
+</em>
+</p>
 
 **Languages I have used**
 
